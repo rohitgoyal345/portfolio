@@ -1,0 +1,173 @@
+@media (max-width:992px) {
+    body{
+        overflow-x: hidden;
+    }
+    .card.profile-card {
+        width: 100%;
+        position: relative;
+    }
+    .header {
+        margin-top: 30px;
+    }
+    ul#navTabs {
+        gap: 30px;
+    }
+    .contact-d {
+        margin-bottom: 30px;
+    }
+    .title-bg {
+        font-size: 80px;
+    }
+    .about-heading h2 {
+        font-size: 40px;
+    } 
+    .Experience-card{
+        margin-top: 30px;
+    }
+    .review-card3{
+        margin-top: 30px;
+    }
+}
+@media (max-width:768px) {
+    .card.review-card.review-card2 {
+        margin: 30px 0;
+    }  
+    .Experience-card{
+        margin-top: 30px;
+    }
+    .card.service-card.service-card2 {
+        margin: 30px 0;
+    }
+    .project-main {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:576px) {
+    .title-bg {
+        font-size: 38px;
+    }
+    .about-heading h2 {
+        font-size: 30px; 
+    }   
+    .about-info h1 {
+        font-size: 30px;
+    }
+    .about-info p {
+        font-size: 16px;
+    }
+    .info ul {
+        flex-direction: column;
+    }
+    .info ul li {
+        width:100%;
+        margin-bottom: 10px;
+    }
+    .card.review-card.review-card2 {
+        margin: 30px 0;
+    }   
+    .info-content h6 {
+        font-size: 16px;
+    }
+    .info-content h5 {
+        font-size: 15px;
+    }
+    .info-content p {
+        font-size: 15px;
+        margin: 6px 0;
+    }
+    .education-info ul li {
+        margin: 15px 0px;
+    }
+    .Experience-card{
+        margin-top: 30px;
+    }
+    .skill-m{
+        margin-top: 40px !important;
+    }
+    .card.service-card.service-card2 {
+        margin: 30px 0;
+    }
+    .project-main {
+        padding: 20px 20px;
+        margin-bottom: 30px;
+    }
+    .img1 {
+        height: 233px;
+    }
+}
+
+@media (min-width:355px) and (max-width:500px) {
+    .cleanup-title2 {
+        left: 86% !important;
+    }
+    .cleanup-precent2 {
+        left: 82% !important;
+    }
+    .cleanup-precent3 {
+        left: 75% !important;
+    }
+    
+    .cleanup-precent5 {
+        left: 72% !important;
+    }
+    
+    .cleanup-precent6 {
+        left: 63% !important;
+    }
+    
+    .cleanup-precent8 {
+        left: 55% !important;
+    }
+}
+@media (min-width:500px) and (max-width:576px) {
+    .cleanup-title2 {
+        left: 88% !important;
+    }
+    .cleanup-precent2 {
+        left: 82% !important;
+    }
+    .cleanup-precent3 {
+        left: 78% !important;
+    }
+    
+    .cleanup-precent5 {
+        left: 72% !important;
+    }
+    
+    .cleanup-precent6 {
+        left: 63% !important;
+    }
+    
+    .cleanup-precent8 {
+        left: 55% !important;
+    }
+}
+@media (min-width:577px) and (max-width:992px) {
+    .resposive-skill{
+        margin-top:48px !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .cleanup-title2 {
+        left: 83% !important;
+    }
+    .cleanup-precent2 {
+        left: 82% !important;
+    }
+    .cleanup-precent3 {
+        left: 78% !important;
+    }
+    
+    .cleanup-precent5 {
+        left: 72% !important;
+    }
+    
+    .cleanup-precent6 {
+        left: 63% !important;
+    }
+    
+    .cleanup-precent8 {
+        left: 55% !important;
+    }
+}
