@@ -67,3 +67,39 @@ submitButton.addEventListener("click", async (e) => {
     alert("Oops! There was a problem submitting your form.");
   }
 });
+
+
+
+
+const downloadBtn = document.getElementById("downloadBtn");
+const buttonIcon = document.getElementById("buttonIcon");
+
+downloadBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Add reverse animation class
+  downloadBtn.classList.add("reverse");
+
+  // Change icon to check
+  buttonIcon.classList.remove("fa-download");
+  buttonIcon.classList.add("fa-check");
+
+  // Create a temporary anchor to force download
+  const link = document.createElement("a");
+  link.href = downloadBtn.getAttribute("href");
+  link.download = "Rohit-CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // After 2s, remove animation and open in new tab
+  setTimeout(() => {
+    downloadBtn.classList.remove("reverse");
+
+    buttonIcon.classList.remove("fa-check");
+    buttonIcon.classList.add("fa-download");
+
+    // Open file in new tab
+    window.open(downloadBtn.getAttribute("href"), "_blank");
+  }, 1000);
+});

@@ -21,6 +21,7 @@
             --card-border-color: #0c1f2e;
             --color-primary: #139bfd;
             --color-success: #13fdfd;
+            --color-blue:#339bf7;
             --icon-gradient-bg: linear-gradient(315deg, #13fdfd 0%, #139bfd 100%);
             --title-gardient-color: linear-gradient(312deg, #13fdfd 0%, #139bfd 100%);
             --light-blue-color-text: linear-gradient(135deg, #13fdfd4a 0%, #139bfd54 100%);
@@ -31,6 +32,8 @@
         .main-content {
             width: 100%;
             padding: 50px 0;
+            padding-bottom:130px;
+            margin-top:90px;
         }
         /* = profile-card css start = */
         
@@ -49,12 +52,16 @@
         .profile-img {
             overflow: hidden;
             width: 100%;
+            position: absolute;
+            height: 100%;
+            right:0;
+            top: 0px;
+            z-index: -1;
         }
         
         .profile-img img {
-            width: 100%;
-            height: 330px;
-            border-radius: 10px;
+            width:100%;
+            height:100%;
         }
         
         .profile-card::after {
@@ -167,7 +174,7 @@
             color: #fff;
             background-color: transparent;
             outline: none !important;
-            border: 2px solid #ffb400;
+            border: 2px solid var(--color-blue);
         }
         
         .button:before {
@@ -180,7 +187,7 @@
             right: 0;
             transform: translateX(100%);
             transition: .3s ease-out all;
-            background: #ffb400;
+            background:var(--color-blue);
         }
         
         .button .button-text {
@@ -213,19 +220,67 @@
         .button:hover .button-icon {
             top: 18px;
         }
+        .button.reverse::before {
+            transform: translateX(0%) !important;
+          }
+          
+          .button.reverse:hover::before {
+            transform: translateX(100%) !important;
+          }
+          
+          .button.reverse .button-text {
+            opacity: 0;
+          }
+          
+          .button.reverse .button-icon {
+            top: 18px;
+          }
         /* = profile-card css end = */
         /*  user-info-main css start  */
         /* header css */
-        
+
+        .navbar-toggler{
+            box-shadow:none;
+            outline: none;
+            border: none;
+        }
+        .navbar-toggler:focus {
+            box-shadow:none;
+        }
+        .navbar-toggler i{
+            color: #fff;
+            background:var(--color-blue);
+            padding:10px 12px;
+            border-radius:50px;
+        }
+
         .header {
+            position: fixed;
+            top: 30px;
+            width:100%;
+            z-index: 999;
+            left: 0;
+            right: 0;
+        }
+        .navbar{
             background-color: var(--card-bg);
             border: 2px solid var(--card-border-color);
             border-radius: 10px;
-            padding: 20px;
+            padding:12px 20px;
         }
-        
+        ul#navTabs\ navbar {
+            justify-content: center;
+            width: 100%;
+        }
         li.nav-item {
             margin-right: 15px;
+            display: flex;
+            justify-content: space-between;
+            width:160px;
+        }
+        .let-talk-btn{
+            /* position: absolute;
+            right: 0; */
         }
         
         .nav-link {
@@ -233,7 +288,7 @@
             font-size: 18px;
             color: var(--text-color);
             border-radius: 10px;
-            padding: 10px 30px;
+            padding: 10px 20px;
             width: 100%;
             display: flex;
             margin: 0;
@@ -246,8 +301,11 @@
             overflow: hidden;
             border: 1px solid #ffffff0f !important;
         }
+        .nav-link i{
+            margin-right:10px;
+        }
         
-        .nav-link::before {
+        /* .nav-link::before {
             content: "";
             position: absolute;
             inset: 0px;
@@ -265,33 +323,81 @@
             opacity: 0;
             transition: opacity 0.5s ease;
             will-change: opacity;
-        }
+        } */
         
-        .nav-pills .nav-link:hover::before,
+        /* .nav-pills .nav-link:hover::before,
         .nav-pills .nav-link:focus::before,
         .nav-pills .nav-link.active::before {
             opacity: 1;
-        }
+        } */
         
         .nav-pills .nav-link.active,
         .nav-pills .show>.nav-link {
             color: #fff;
-            background: #06131b;
+            /* background: #06131b; */
+            background: var(--color-blue) !important;
         }
         .nav-link:focus, .nav-link:hover {
             color: #ededed;
         }
         /* .nav-tab-user-info css start */
         
-        .nav-tab-user-info {
+        /* .nav-tab-user-info {
             padding-top: 35px;
-        }
+        } */
         /* about sec start */
         
-        .about-main {
+        /* .about-main {
             padding-top: 30px;
         }
-        
+         */
+
+        .about-marquee{
+            background: #06131b !important;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #ffffff0f !important;
+            z-index: 1;
+            padding:10px 5px;
+            border-radius:7px;
+        }
+        .about-marquee::before {
+            content: "";
+            position: absolute;
+            inset: 0px;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            background-clip: border-box;
+            -webkit-mask: linear-gradient(red 0 0) padding-box, linear-gradient(red 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(red 0 0) padding-box exclude, linear-gradient(red 0 0);
+            pointer-events: none;
+            background: linear-gradient(317deg, #13fdfd 0%, rgba(19, 215, 253, 0.2) 38.23%, rgba(19, 191, 253, 0.2) 62.96%, #139bfd 100%) border-box;
+            z-index: 1;
+            transition: 0.5s;
+            transition: border-color 0.5s;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            will-change: opacity;
+        }
+        .about-marquee::after {
+            position: absolute !important;
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: var(--color-primary);
+            border-radius: 100%;
+            left: 0%;
+            transform: translateX(-50%);
+            filter: blur(40px);
+            opacity: 1;
+            transition: 0.5s;
+            bottom: -60px;
+        }
+        .marquee p{
+            color:var(--title-color);
+            margin:0;
+        }
         .about-heading {
             width: 100%;
             position: relative;

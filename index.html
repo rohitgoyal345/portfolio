@@ -24,17 +24,57 @@
 
 <body>
 
+    <div class="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav nav-pills mb-0 ms-auto d-lg-flex" id="navTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="tab-home" data-bs-toggle="pill" data-bs-target="#content-home" type="button" role="tab">
+                    <i class="fa-solid fa-user"></i> About Me
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab-profile" data-bs-toggle="pill" data-bs-target="#content-profile" type="button" role="tab">
+                    <i class="fa-solid fa-file"></i> My Resume
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab-contact" data-bs-toggle="pill" data-bs-target="#content-contact" type="button" role="tab">
+                    <i class="fa-solid fa-layer-group"></i> Services
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab-project" data-bs-toggle="pill" data-bs-target="#content-project" type="button" role="tab">
+                    <i class="fa-solid fa-diagram-project"></i> Projects
+                  </button>
+                </li>
+                <li class="nav-item let-talk-btn" role="presentation">
+                  <button class="nav-link" id="tab-info" data-bs-toggle="pill" data-bs-target="#content-info" type="button" role="tab">
+                    <i class="fa-solid fa-envelope"></i> Let's Talk
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
 
     <div class="main-content">
         <div class="container">
             <div class="row">
-
-
+  
                 <div class="col-lg-4 ">
                     <div class="card profile-card">
                         <div class="card-body">
                             <div class="profile-img">
-                                <img src="./images/portfolio-image-1.jpg" alt="portfolio-image-1">
+                                <img src="./images/user.png" alt="user">
                             </div>
                             <div class="profile-info">
                                 <h2><span></span>Hi, I'm Rohit — Your Digital Partner.</h2>
@@ -56,12 +96,20 @@
                                     </ul>
                                 </div>
 
-                                <div class="main-btn">
+                                <!-- <div class="main-btn">
                                     <a class="button" href="./images/Cv.pdf" target="_blank">
                                         <span class="button-text">Download CV</span>
                                         <span class="button-icon"><i class="fa-solid fa-download"></i></span>
                                     </a>
-                                </div>
+                                </div> -->
+                                <div class="main-btn">
+                                    <a id="downloadBtn" class="button" href="./images/Rohit-cv.pdf"  download="Rohit-CV.pdf" target="_blank">
+                                      <span class="button-text">Download CV</span>
+                                      <span class="button-icon">
+                                        <i id="buttonIcon" class="fa-solid fa-download"></i>
+                                      </span>
+                                    </a>
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -69,30 +117,17 @@
 
                 <div class="col-lg-8 col-12">
                     <div class="user-info-main">
-                        <div class="header">
-                            <ul class="nav nav-pills mb-0 d-lg-flex" id="navTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="tab-home" data-bs-toggle="pill" data-bs-target="#content-home" type="button" role="tab">About Me</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="tab-profile" data-bs-toggle="pill" data-bs-target="#content-profile" type="button" role="tab">My Resume</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="tab-contact" data-bs-toggle="pill" data-bs-target="#content-contact" type="button" role="tab">Services</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="tab-project" data-bs-toggle="pill" data-bs-target="#content-project" type="button" role="tab">Projects</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="tab-info" data-bs-toggle="pill" data-bs-target="#content-info" type="button" role="tab">Let`s Talk</button>
-                                </li>
-                            </ul>
-                        </div>
+                        
                         <div class="nav-tab-user-info">
                             <!-- Tab Content -->
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="content-home" role="tabpanel">
                                     <div class="about-main">
+                                        <div class="about-marquee">
+                                            <marquee behavior="scroll" direction="left" scrollamount="8" class="marquee" >
+                                                <p>🚀 Welcome to Rohit's Creative World • Frontend Developer • Passionate About Code & Design • Let's Build Something Amazing Together 💻✨</p>
+                                            </marquee>
+                                        </div>
                                         <div class="about-heading">
                                             <span class="title-bg">ABOUT ME</span>
                                             <h2>Know Me More</h2>
